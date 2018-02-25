@@ -18,11 +18,11 @@ expandSub [] = Nil
 expandSub (y :: z) = There y :: expandSub z
 
 ||| Find the corresponding location of an element thanks to a sublist
-mapElem : Sub xs ys -> Elem x xs -> Elem x ys
-mapElem [] Here impossible
-mapElem [] (There _) impossible
-mapElem (z :: es) Here = z
-mapElem (z :: es) (There later) = mapElem es later
+mapElem : Elem x xs -> {auto prf: Sub xs ys} -> Elem x ys
+mapElem Here {prf = []} impossible
+mapElem (There _) {prf = []} impossible
+mapElem Here {prf = z :: es} = z
+mapElem (There later) {prf = (z :: es)} = mapElem later {prf = es}
 
 ||| A list is its own sub
 %hint
@@ -33,7 +33,7 @@ reflSub {xs = (x :: xs)} = Here :: expandSub reflSub
 ||| 'Sub' is transitive
 transitivity : Sub xs ys -> Sub ys zs -> Sub xs zs
 transitivity [] y = []
-transitivity (x :: es) es' = mapElem es' x :: transitivity es es'
+transitivity (x :: es) es' = mapElem x {prf = es'} :: transitivity es es'
 
 ||| A non empty list is not a 'Sub' of the empty list
 nonEmptyNotSubNil : Not (Sub (x::xs) [])

@@ -1,0 +1,15 @@
+package union_type
+
+brief = "Proof that all elements of a list are in another list"
+readme = Readme.md
+version = 0.1.0
+
+author = Nicolas Biri <nicolas@biri.name>
+maintainer = Nicolas Biri <nicolas@biri.name>
+
+sourceloc = https://github.com/berewt/UnionType
+bugtracker = https://github.com/berewt/UnionType/issues
+
+sourcedir = src
+
+modules = Data.Sublist

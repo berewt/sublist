@@ -3,6 +3,7 @@ module Data.Sub
 import Data.List
 
 %default total
+%access export
 
 ||| A Sublist is a list of proofs that each element in 'subXs' is an element of 'xs'
 public export
@@ -18,6 +19,7 @@ expandSub [] = Nil
 expandSub (y :: z) = There y :: expandSub z
 
 ||| Find the corresponding location of an element thanks to a sublist
+public export
 mapElem : Elem x xs -> {auto prf: Sub xs ys} -> Elem x ys
 mapElem Here {prf = []} impossible
 mapElem (There _) {prf = []} impossible

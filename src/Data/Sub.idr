@@ -1,6 +1,6 @@
 module Data.Sub
 
-import Data.List
+import public Data.List
 
 %default total
 %access export

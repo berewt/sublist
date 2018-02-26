@@ -7,8 +7,8 @@ version = 0.1.0
 author = Nicolas Biri <nicolas@biri.name>
 maintainer = Nicolas Biri <nicolas@biri.name>
 
-sourceloc = https://github.com/berewt/UnionType
-bugtracker = https://github.com/berewt/UnionType/issues
+sourceloc = https://github.com/berewt/sublist
+bugtracker = https://github.com/berewt/sublist/issues
 
 sourcedir = src
 

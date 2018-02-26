@@ -1,4 +1,4 @@
-package union_type
+package sublist
 
 brief = "Proof that all elements of a list are in another list"
 readme = Readme.md
@@ -12,4 +12,4 @@ bugtracker = https://github.com/berewt/UnionType/issues
 
 sourcedir = src
 
-modules = Data.Sublist
+modules = Data.Sub

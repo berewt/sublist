@@ -2,7 +2,7 @@ package sublist
 
 brief = "Proof that all elements of a list are in another list"
 readme = Readme.md
-version = 0.1.0
+version = 0.2.0
 
 author = Nicolas Biri <nicolas@biri.name>
 maintainer = Nicolas Biri <nicolas@biri.name>
@@ -13,3 +13,4 @@ bugtracker = https://github.com/berewt/sublist/issues
 sourcedir = src
 
 modules = Data.Sub
+modules = Data.Vect.Sub

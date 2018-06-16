@@ -55,7 +55,7 @@ noSubExpand : (contra : Sub xs ys -> Void) -> Not (Sub (x :: xs) ys)
 noSubExpand contra (x :: es) = contra es
 
 ||| Decide whether the sublist property holds for two vectors
-decSub : DecEq a => (xs : List a) -> (ys : List a) -> Dec (Sub xs ys)
+decSub : DecEq a => (xs : Vect n a) -> (ys : Vect m a) -> Dec (Sub xs ys)
 decSub [] ys = Yes []
 decSub (x :: xs) ys with (isElem x ys)
   | (Yes prfHead) with (decSub xs ys)
